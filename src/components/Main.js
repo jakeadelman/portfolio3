@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import { useWindowDimensions } from "./heightWidth";
+import Nav from "./Nav";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,10 +13,20 @@ import {
 
 export default function Main() {
   const { height, width } = useWindowDimensions();
-  console.log(width);
-
+  const [place, setPlace] = useState("1");
+  const [show, setShow] = useState(false);
   const isBig = height > 1000 && width > 900;
-  console.log(isBig);
+
+  function showMe(e) {
+    console.log("setting show");
+
+    if (show == true) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+    setPlace(e.target.id);
+  }
 
   return (
     <div className="outer" id="outer">
@@ -39,11 +50,7 @@ export default function Main() {
             </ul>
           </nav>
         ) : (
-          <nav>
-            <li className="first">
-              <a href="#outer">Home</a>
-            </li>
-          </nav>
+          <Nav id={place} show={show} showFunc={showMe} />
         )}
       </div>
       <div className="home-title">
