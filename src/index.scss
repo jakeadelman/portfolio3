@@ -493,6 +493,9 @@ h2.portfolio-title{
 .small-nav{
   display:fixed;
 }
+.small-nav li{
+  list-style-type:none;
+}
 
 @media only screen and (max-width:900px){
   .name{
@@ -510,6 +513,7 @@ h2.portfolio-title{
     top:0;
     width: 100vw;
     background-color:#1d1d1d;
+    position: absolute;
   }
 
   .ribbon{
@@ -517,5 +521,18 @@ h2.portfolio-title{
   }
   .home-title, .portfolio, .contact{
     width:100vw;
+  }
+
+}
+
+@media only screen and (max-height:870px){
+  .home-title-mid-outer::before{
+       display:none;
+  }
+  .home-title-mid:before{
+    display:none;
+  }
+  .side-nav{
+    height:100px;
   }
 }
