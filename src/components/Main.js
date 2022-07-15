@@ -1,5 +1,7 @@
 import React from "react";
 import Portfolio from "./Portfolio";
+import Contact from "./Contact";
+import { useWindowDimensions } from "./heightWidth";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,21 +11,40 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Main() {
+  const { height, width } = useWindowDimensions();
+  console.log(width);
+
+  const isBig = height > 1000 && width > 900;
+  console.log(isBig);
+
   return (
-    <div className="outer">
+    <div className="outer" id="outer">
       <div className="side-nav">
         <div className="name">
           <span>J</span>acob
           <div className="webdev grey">Web Developer</div>
         </div>
-        <nav>
-          <ul className="grey">
-            <li className="first">Home</li>
-            <li>Portfolio</li>
-            <li>About</li>
-            <li class="last">Contact</li>
-          </ul>
-        </nav>
+        {isBig ? (
+          <nav>
+            <ul>
+              <li className="first">
+                <a href="#outer">Home</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li class="last">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        ) : (
+          <nav>
+            <li className="first">
+              <a href="#outer">Home</a>
+            </li>
+          </nav>
+        )}
       </div>
       <div className="home-title">
         <div class="ribbon">
@@ -58,6 +79,7 @@ export default function Main() {
         </div>
       </div>
       <Portfolio />
+      <Contact />
     </div>
   );
 }

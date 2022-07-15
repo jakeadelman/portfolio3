@@ -343,7 +343,13 @@ nav li{
   font-size:17px;
   text-align: center;
   font-weight:500;
-
+}
+nav li a{
+  color: #8d8d8d;
+  text-decoration: none;
+}
+nav li a:hover{
+  color:#05fdd8
 }
 
 nav .first{
@@ -457,4 +463,56 @@ $ribbonColor:	#fff;
 
 .card{
   height:250px;
+}
+
+.contact{
+  margin-left:auto;
+  width:calc(100vw - 160px);
+}
+
+.inner-contact{
+  padding:60px;
+  position:relative;
+}
+
+h2.portfolio-title{
+  position:relative;
+}
+
+.relative{
+  position:relative;
+}
+
+.contact-cards{
+  display:flex;
+}
+.contact-card{
+  margin-right:20px;
+  font-size:18px;
+}
+
+@media only screen and (max-width:900px){
+  .name{
+    display:none;
+  }
+
+  nav{
+    right:0;
+    top:0;
+    bottom:100%;
+  }
+
+  .side-nav{
+    height:160px;
+    top:0;
+    width: 100vw;
+    background-color:#1d1d1d;
+  }
+
+  .ribbon{
+    display:none;
+  }
+  .home-title, .portfolio, .contact{
+    width:100vw;
+  }
 }

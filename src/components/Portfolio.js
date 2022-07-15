@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Portfolio() {
   return (
-    <div className="portfolio">
+    <div className="portfolio" id="portfolio">
       <div className="inner-portfolio">
         <div className="portfolio-title-wrap">
           <h2 className="portfolio-title">My Portfolio</h2>
