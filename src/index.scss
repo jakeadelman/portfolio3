@@ -462,6 +462,7 @@ $ribbonColor:	#fff;
 
 .card{
   height:250px;
+  position:relative;
 }
 
 .contact{
@@ -496,6 +497,17 @@ h2.portfolio-title{
 .small-nav li{
   list-style-type:none;
 }
+.label-img{
+  position:absolute;
+  bottom:0;
+  left:0;
+  background:black;
+  color:white;
+  padding:10px;
+  font-weight:600;
+}
+
+
 
 @media only screen and (max-width:900px){
   .name{

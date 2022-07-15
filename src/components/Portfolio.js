@@ -14,25 +14,43 @@ export default function Portfolio() {
         </div>
         <section className="cards">
           <div className="card">
-            <img
-              src={require("../assets/images/stepnbox5.png")}
-              className="first-card-img"
-            />
+            <a href="https://stepnbox.xyz">
+              <img
+                src={require("../assets/images/stepnbox5.png")}
+                className="first-card-img"
+              />
+              <div className="label-img">stepnbox.xyz</div>
+            </a>
           </div>
           <div className="card">
-            <img src="https://via.placeholder.com/250" />
+            <a href="https://google.ca">
+              <img src="https://via.placeholder.com/250" />
+              <div className="label-img">google.ca</div>
+            </a>
           </div>
           <div className="card">
-            <img src="https://via.placeholder.com/250" />
+            <a href="https://google.ca">
+              <img src="https://via.placeholder.com/250" />
+              <div className="label-img">google.ca</div>
+            </a>
           </div>
           <div className="card">
-            <img src="https://via.placeholder.com/250" />
+            <a href="https://google.ca">
+              <img src="https://via.placeholder.com/250" />
+              <div className="label-img">google.ca</div>
+            </a>
           </div>
           <div className="card">
-            <img src="https://via.placeholder.com/250" />
+            <a href="https://google.ca">
+              <img src="https://via.placeholder.com/250" />
+              <div className="label-img">google.ca</div>
+            </a>
           </div>
           <div className="card">
-            <img src="https://via.placeholder.com/250" />
+            <a href="https://google.ca">
+              <img src="https://via.placeholder.com/250" />
+              <div className="label-img">google.ca</div>
+            </a>
           </div>
 
           <div></div>
