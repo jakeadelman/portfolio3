@@ -15,7 +15,7 @@ export default function Main() {
   const { height, width } = useWindowDimensions();
   const [place, setPlace] = useState("1");
   const [show, setShow] = useState(false);
-  const isBig = height > 1000 && width > 900;
+  const isBig = height > 100 && width > 90;
 
   function showMe(e) {
     console.log("setting show");
@@ -78,9 +78,11 @@ export default function Main() {
               <div className="about-section">
                 <p>Frontend Web Developer / React Expert</p>
               </div>
-              <button className="contact-me">
-                <span>Contact Me !</span>
-              </button>
+              <a href="#contact">
+                <button className="contact-me">
+                  <span>Contact Me !</span>
+                </button>
+              </a>
             </div>
           </div>
         </div>
